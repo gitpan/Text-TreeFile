@@ -3,6 +3,8 @@ MANIFEST
 Makefile.PL
 README
 TreeFile.pm
+TreeFile/details.pod
+TreeFile/internals.pod
 test.pl
 demodata/treetest.tre
 demodata/testfile.tre

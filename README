@@ -1,4 +1,4 @@
-            file:   Text-TreeFile-0.38.readme
+            file:   Text-TreeFile-0.39.readme
 
   The Perl module, Text::TreeFile supports reading a simple ASCII
 text file format for representing tree structures.  It loads the
@@ -17,6 +17,15 @@ the use of perl-tk (modules in the Tk:: namespace) for building
 GUI-based application programs (see an example data file, mentioned
 below).
 
+DOCUMENTATION
+
+  There are man pages for Text::TreeFile(3pm) which introduces the
+functions and use of the modele, Text::TreeFile::details(3pm) which
+gives exhaustive specification of alternatives and features for use,
+and Text::TreeFile::internals(3pm) which documents the code itself.
+Another module: Qtk::QuickTk(3pm) uses TreeFile by default and, thus,
+is a significant application demonstrating TreeFile's features.
+
 AVAILABILITY
 
   Copyright (c) 2000 John Kirk. All rights reserved.
@@ -26,6 +35,25 @@ modify it under the same terms as Perl itself.
   The latest version of this module should always be available
 at any CPAN (http://www.cpan.org) mirror, or from the author:
              http://perl.dystanhays.com/jnk
+
+INSTALLATION
+
+  I usually install modules using the CPAN.pm module, invoked as:
+
+       perl -MCPAN -e shell
+
+It can be run by an ordinary user, or root (to install system-wide),
+and asks a few configuration questions the first ime it's run.
+
+  The *.tar.gz file, after being uncompressed and unarchived, expects
+to be installed with the following commands:
+
+       perl Makefile.PL
+       make
+       make test
+
+  This creates and installs man pages, generated from *.pm and *.pod
+files, among other things.
 
 SYNOPSIS
 
@@ -45,7 +73,17 @@ CONTENTS
   This distribution provides the following:
 
 TreeFile.pm  -- the code for the module, which your program will
-  access with a "use Text::Treefile;" statement, typically.
+  access with a "use Text::Treefile;" statement, typically.  Pod
+  documentation is embedded in this file, from which the man page,
+  Text::TreeFile(3pm) is generated.
+
+details.pod  -- plain old documentation exhausively specifying
+  the options for use of the module, from which the man page,
+  Text::TreeFile::details(3pm) is generated.
+
+internals.pod  -- plain old documentation of the module code
+  itself, from which the man page, Text::TreeFile::internals(3pm)
+  is generated.
 
 test.pl  -- a small program which contains hand-coded copies of
   the data structures that should result from using the module
@@ -161,6 +199,3 @@ sub showlines { my ($spec,$level)=@_;
 1;
 __END__
 ------------------- end of file:  treetest -----------------------
-
-COPYRIGHT
-
